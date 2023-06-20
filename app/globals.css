@@ -87,17 +87,50 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 2rem;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+input {
+  width: 30%;
+}
+
+h1 {
+  width: fit-content !important;
+  font-size: 2.5rem !important;
+}
+
+.nes-container {
+  height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.message-container {
+  margin-bottom: 2rem;
+
+  .nes-text {
+    margin-bottom: 0;
+  }
+}
+
+.message {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+
+  &.-right {
+    justify-content: flex-end;
+  }
+}
+
+.nes-balloon {
+  margin-bottom: 3rem !important;
 }
 
 @media (prefers-color-scheme: dark) {
